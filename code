@@ -1,0 +1,19 @@
+import math
+y,w = map(int, input().split())
+
+maxx = max(y,w)
+
+# Calculate the number of favorable outcomes for Dot
+favourable = 6 - maxx + 1
+
+#Total possible outcome for die
+total = 6
+
+# Find the greatest common divisor (GCD) to reduce the fraction
+gcd_value = math.gcd(favourable, total)
+
+# Output the result as an irreducible fraction
+print(f"{favourable // gcd_value}/{total // gcd_value}")
+
+
+
